@@ -10,24 +10,32 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <table class="table">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Name</th>
-              <th scope="col">email</th>
-              <th scope="col">Handle</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h1 class="display-4">Employee Directory</h1>
+            <p class="lead">Find your employees by name, email, or ID.</p>
+          </div>
+        </div>
+        <div>
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">email</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.state.employeeChart.map(employee => (
+                <tr>
+                  <th scope="row">{employee.id}</th>
+                  <td>{employee.name}</td>
+                  <td>{employee.email}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     );
   }
