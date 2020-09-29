@@ -1,0 +1,27 @@
+[
+    {
+        "id":1,
+        "name": "John Wayne",
+        "email": "theduke@gmail.com"
+    },
+    {
+        "id":2,
+        "name": "Clint Eastwood",
+        "email": "blondie@gmail.com"
+    },
+    {
+        "id":3,
+        "name": "Joakim Brodén",
+        "email": "jocke@gmail.com"
+    },
+    {
+        "id":4,
+        "name": "Megan Lovell",
+        "email": "larkinsis1@gmail.com"
+    },
+    {
+        "id":5,
+        "name": "Jerry Reed",
+        "email": "amosmosesbest@gmail.com"
+    }
+]
