@@ -5,7 +5,22 @@ import employees from './employees.json'
 
 class App extends React.Component {
   state = {
-    employeeChart: employees
+    employeeChart: employees,
+    sortOrder: ""
+  }
+  sortName = () => {
+    const nameSort = this.state.employeeChart.sort((a,b) => {
+      var nameA = a.name.toUpperCase();
+      var nameB = b.name.toUpperCase();
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+
+      return 0;
+    })
   }
   render() {
     return (
@@ -21,7 +36,7 @@ class App extends React.Component {
             <thead class="thead-dark">
               <tr>
                 <th scope="col">ID</th>
-                <th scope="col">Name</th>
+                <th scope="col" onClick = {() => this.sortName()}>Name</th>
                 <th scope="col">email</th>
               </tr>
             </thead>
